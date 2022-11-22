@@ -6,14 +6,15 @@ on:
         branches: [ "main" ]
 
 jobs:
-build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code
+            - uses: actions/checkout@v3
 
-    - name: Run a one-line script
-      run: pip install pylint
+            - name: Run a one-line script
+            run: pip install pylint
 
-    - name: Run the scripts
-      run: python3 linter.py
-      continue-on-error: false
+            - name: Run the scripts
+            run: python3 linter.py
+            continue-on-error: false
