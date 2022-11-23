@@ -1,4 +1,11 @@
 """ Egyszeresen lancol lista adatstrukturaja """
+import dataclasses
+
+
+@dataclasses.dataclass
+
+
+
 class LinkedListNode:
     """ Egyszeresen lancolt lista osztaly"""
     def __init__(self, value):
